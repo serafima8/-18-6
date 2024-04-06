@@ -11,25 +11,31 @@ namespace КП_18_6__Задание_1
     /// </summary>
     class Free : Software
     {
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
         public Free() { }
+        /// <summary>
+        /// Конструктор с параметрами 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="manufacturer"></param>
         public Free(string name, string manufacturer):base(name, manufacturer)  { }
-
+        /// <summary>
+        /// Метод, который выводит информацию о Свободном ПО
+        /// </summary>
         public override void DisplayInfo()
         {
             Console.WriteLine($"Название: {Name}\nПроизводитель: {Manufacturer}");
         }
-        //public override void IsUsableOnDate()
-        //{
-           
-        //}
-
-        static public Free Show()
+        /// <summary>
+        /// Метод для вывода информации о возможности использования ПО на текущую дату
+        /// </summary>
+        /// <returns></returns>
+        public override string IsUsableOnDate()
         {
-            Console.Write("Название: ");
-            string name = Console.ReadLine();
-            Console.Write("Производитель: ");
-            string manufacturer = Console.ReadLine();
-            return new Free(name, manufacturer);
+            return $"{Name} допустимо использовать на текущую дату";
         }
+
     }
 }

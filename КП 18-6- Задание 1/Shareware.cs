@@ -11,31 +11,51 @@ namespace КП_18_6__Задание_1
     /// </summary>
     class Shareware : Software
     {
+        /// <summary>
+        /// Свойство Дата установки 
+        /// </summary>
         public DateTime Installation { get; set; }
+        /// <summary>
+        /// Свойство Срок бесплатного использования 
+        /// </summary>
         public int Usage { get; set; }
-
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
         public Shareware() { }
+        /// <summary>
+        /// Конструктор с параметрами 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="manufacturer"></param>
+        /// <param name="installation"></param>
+        /// <param name="usage"></param>
         public Shareware(string name, string manufacturer, DateTime installation, int usage):base(name, manufacturer)
         {
             this.Installation = installation;
             this.Usage = usage;
         }
+        /// <summary>
+        /// Метод для вывода информации об Условно-бусплатном ПО
+        /// </summary>
         public override void DisplayInfo()
         {
-            Console.WriteLine($"Название: {Name}\nПроизводитель: {Manufacturer}\nДата установки: {Installation}\nСрок бесплатного использования: {Usage}");
+            Console.WriteLine($"Название: {Name}\nПроизводитель: {Manufacturer}\nДата установки: {Installation}\nСрок бесплатного использования: {Usage} дней");
         }
-
-        static public Shareware Show()
+        /// <summary>
+        /// Метод для вывода информации о возможности использования ПО на текущую дату
+        /// </summary>
+        /// <returns></returns>
+        public override string IsUsableOnDate()
         {
-            Console.Write("Название: ");
-            string name = Console.ReadLine();
-            Console.Write("Производитель: ");
-            string manufacturer = Console.ReadLine();
-            Console.Write("Дата установки: ");
-            DateTime installation = Convert.ToDateTime(Console.ReadLine());
-            Console.Write("Срок бесплатного использования: ");
-            int usage = Convert.ToInt32(Console.ReadLine());
-            return new Shareware(name, manufacturer, installation, usage);
+            if (DateTime.Now > Installation.AddDays(Usage))
+            {
+                return $"{Name} не допустимо использовать на текущую дату";
+            }
+            else
+            {
+                return $"{Name} допустимо использовать на текущую дату";
+            }
         }
 
     }

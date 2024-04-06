@@ -1,0 +1,7 @@
+C:\Users\seraf\OneDrive\Рабочий стол\КП 18-6- Задание 1\bin\Debug\КП 18-6- Задание 1.exe.config
+C:\Users\seraf\OneDrive\Рабочий стол\КП 18-6- Задание 1\bin\Debug\КП 18-6- Задание 1.exe
+C:\Users\seraf\OneDrive\Рабочий стол\КП 18-6- Задание 1\bin\Debug\КП 18-6- Задание 1.pdb
+C:\Users\seraf\OneDrive\Рабочий стол\КП 18-6- Задание 1\obj\Debug\КП 18-6- Задание 1.csproj.AssemblyReference.cache
+C:\Users\seraf\OneDrive\Рабочий стол\КП 18-6- Задание 1\obj\Debug\КП 18-6- Задание 1.csproj.CoreCompileInputs.cache
+C:\Users\seraf\OneDrive\Рабочий стол\КП 18-6- Задание 1\obj\Debug\КП 18-6- Задание 1.exe
+C:\Users\seraf\OneDrive\Рабочий стол\КП 18-6- Задание 1\obj\Debug\КП 18-6- Задание 1.pdb
